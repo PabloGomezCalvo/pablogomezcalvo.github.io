@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- For using the icons free-->
+    <!-- For using the free icons for github, facebook, linkedin, etc -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
@@ -12,21 +12,30 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/main.css" />
+    <!-- Name that will be given to the browser tab of the webpage  -->
     <title>Pablo's Portfolio</title>
   </head>
-  <body>
+  <body id="bg-img">
+    <!-- This overlay is just to use the grey background filter.-->
+    <div class="overlay"></div>
+    <!-- What appears when you click the icon -->
     <header>
-      <div class="manu-btn">
+      <!-- Icon in the top-rightside -->
+      <div class="menu-btn">
         <div class="btn-line"></div>
         <div class="btn-line"></div>
         <div class="btn-line"></div>
       </div>
 
+      <!-- The new menu that will appear when we touch the icon in the rightside of the web page -->
       <nav class="menu">
+        <!-- Leftside-->
         <div class="menu-branding">
+          <!-- Image/Portrait -->
           <div class="portrait"></div>
         </div>
-        <ul class="manu-nav">
+        <!-- Unordered List that will appear when we touch the icon in the rightside of the web page-->
+        <ul class="menu-nav">
           <li class="nav-item">
             <a href="/" class="nav-link">
               Home
@@ -54,6 +63,7 @@
       </nav>
     </header>
 
+    <!-- Rest of the page, name, links to github, texts, etc -->
     <main id="home">
       <h1 class="lg-heading">
         Pablo Gomez Calvo
@@ -62,15 +72,19 @@
         Game Developer
       </h2>
       <div class="icons">
-        <a href="#!">
+        <a href="https://github.com/PabloGomezCalvo">
           <i class="fab fa-github fa-2x"></i>
         </a>
         <a href="#!">
           <i class="fab fa-linkedin fa-2x"></i>
         </a>
+        <a href="https://www.pivotaltracker.com/n/projects/2284622">
+          <i class="fas fa-tasks fa-2x"></i>
+        </a>
       </div>
     </main>
 
+    <!-- javascripts scripts includes -->
     <script src="js/main.js"></script>
   </body>
 </html>

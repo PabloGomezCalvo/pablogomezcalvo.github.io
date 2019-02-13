@@ -1,11 +1,13 @@
-$primary-color: #444;
-$secondary-color: #eece1a;
+//Just like and include of C++ or a using of C#
+@import "config";
 
+//The tag "*" will be applied to all the document.
 * {
   box-sizing: border-box;
 }
-
+//Body Tag
 body {
+  @include background;
   background: $primary-color;
   color: #fff;
   height: 100%;
@@ -22,27 +24,33 @@ h3 {
   font-weight: 400;
 }
 
+//Name
 h1.lg-heading {
   font-size: 6rem;
 }
 
+//Preference Work
 h2.sm-heading {
   margin-bottom: 2rem;
   padding: 0.2rem 1rem;
+  //RGBA is a function that will be used to give transparency in case we have a background image
   background: rgba(lighten($primary-color, 2), 0.5);
 }
 
+//Links
 a {
   color: white;
   text-decoration: none;
 }
 
+//"Button of the 3 lines"
 header {
+  //We use position fixed to make the button stay always in the same position so if we scroll down, it will be always visible.
   position: fixed;
   z-index: 2;
   width: 100%;
 }
-
+//Div donde va a estar toda la información
 main {
   padding: 4rem;
   height: 100%;
@@ -53,7 +61,18 @@ main {
       padding: 0.4rem;
       &:hover {
         color: $secondary-color;
+        //Like calling a function you declare up
+        @include easeOut();
       }
+    }
+  }
+
+  &#home {
+    //not having scroll bars
+    overflow: hidden;
+    h1 {
+      //vh is like dividing the page in 100 slices and taking 20 in this case.
+      margin-top: 20vh;
     }
   }
 }

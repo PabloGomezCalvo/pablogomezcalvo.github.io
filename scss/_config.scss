@@ -1,0 +1,36 @@
+//Global variables
+$primary-color: #444;
+$secondary-color: #eece1a;
+$show-home-image: true;
+$home-image: url(../img/background.jpg);
+$background-opacity: 0.7;
+//something like a function
+@mixin easeOut {
+  //The transition of colors for white to secondary-color
+  transition: all 0.5s ease-out;
+}
+
+//We use a background image that covers all the webpage and is fixed if the variable show-home-image is true.
+
+@mixin background {
+  @if $show-home-image {
+    &#bg-img {
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+
+      .overlay {
+        position: absolute;
+        // We start is top-left corner and say 100% height and width to cover all the page.
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // negative index to force to be always at the back
+        z-index: -1;
+        //variable color and opacity just changing 2 values of variables.
+        background: rgba($primary-color, $background-opacity);
+      }
+    }
+  }
+}
