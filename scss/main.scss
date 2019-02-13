@@ -1,5 +1,6 @@
 //Just like and include of C++ or a using of C#
 @import "config";
+@import "menu";
 
 //The tag "*" will be applied to all the document.
 * {
@@ -50,7 +51,7 @@ header {
   z-index: 2;
   width: 100%;
 }
-//Div donde va a estar toda la información
+//Div where all the information is displayed
 main {
   padding: 4rem;
   height: 100%;
@@ -69,7 +70,7 @@ main {
 
   &#home {
     //not having scroll bars
-    overflow: hidden;
+    //overflow: hidden;
     h1 {
       //vh is like dividing the page in 100 slices and taking 20 in this case.
       margin-top: 20vh;
