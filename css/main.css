@@ -170,15 +170,11 @@ header {
 main {
   padding: 4rem;
   min-height: calc(100vh - 60px); }
-  main .icons {
-    margin-top: 1rem; }
-    main .icons a {
-      padding: 0.4rem; }
-      main .icons a:hover {
-        color: #eece1a;
-        transition: all 0.5s ease-out; }
   main#home h1 {
     margin-top: 20vh; }
+  main#home h1,
+  main#home h2 {
+    text-align: center; }
 
 footer .icons {
   margin-top: 1rem;
@@ -194,3 +190,23 @@ footer .icons {
   background: #2b2b2b;
   color: white;
   height: 60px; }
+
+.arrow__container {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  width: 5rem;
+  text-align: center;
+  margin-left: -2.5rem;
+  cursor: pointer;
+  opacity: 0.85; }
+
+.arrow__container:hover {
+  opacity: 1; }
+
+.arrow__down {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2000; }

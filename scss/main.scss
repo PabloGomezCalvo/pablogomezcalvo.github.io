@@ -57,18 +57,6 @@ main {
   padding: 4rem;
   //height: 100%;
   min-height: calc(100vh - 60px);
-  .icons {
-    margin-top: 1rem;
-
-    a {
-      padding: 0.4rem;
-      &:hover {
-        color: $secondary-color;
-        //Like calling a function you declare up
-        @include easeOut();
-      }
-    }
-  }
 
   &#home {
     //not having scroll bars
@@ -76,6 +64,11 @@ main {
     h1 {
       //vh is like dividing the page in 100 slices and taking 20 in this case.
       margin-top: 20vh;
+    }
+
+    h1,
+    h2 {
+      text-align: center;
     }
   }
 }
@@ -99,4 +92,27 @@ footer {
   background: darken($color: $primary-color, $amount: 10);
   color: white;
   height: 60px;
+}
+
+.arrow__container {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  width: 5rem;
+  text-align: center;
+  margin-left: -2.5rem;
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.arrow__container:hover {
+  opacity: 1;
+}
+
+.arrow__down {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2000;
 }
