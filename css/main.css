@@ -191,22 +191,40 @@ footer .icons {
   color: white;
   height: 60px; }
 
-.arrow__container {
+div.arrow {
+  width: 6vmin;
+  height: 6vmin;
+  box-sizing: border-box;
   position: absolute;
-  bottom: 3rem;
   left: 50%;
-  width: 5rem;
-  text-align: center;
-  margin-left: -2.5rem;
-  cursor: pointer;
-  opacity: 0.85; }
-
-.arrow__container:hover {
-  opacity: 1; }
-
-.arrow__down {
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 2000; }
+  top: 85%;
+  transform: rotate(135deg); }
+  div.arrow::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-width: 0.8vmin 0.8vmin 0 0;
+    border-style: solid;
+    border-color: #fafafa;
+    transition: 0.2s ease;
+    display: block;
+    transform-origin: 100% 0; }
+  div.arrow:after {
+    content: "";
+    float: left;
+    position: relative;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    border-width: 0 0.8vmin 0 0;
+    border-style: solid;
+    border-color: #fafafa;
+    transform-origin: 100% 0;
+    transition: 0.2s ease; }
+  div.arrow:hover::after {
+    transform: rotate(45deg);
+    border-color: orange;
+    height: 130%; }
+  div.arrow:hover::before {
+    border-color: orange;
+    transform: scale(1); }
