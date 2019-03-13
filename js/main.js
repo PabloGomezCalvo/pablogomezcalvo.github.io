@@ -32,3 +32,19 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+
+//Changing background image
+
+var backgrounds = new Array(
+  "../img/background.jpg",
+  "../img/background2.jpg",
+  "../img/background3.jpg"
+);
+
+var slider = setInterval(function() {
+  document
+    .getElementsByClassName("bg-img")[0]
+    .setAttribute("style", 'background-image: url("' + backgrounds[0] + '")');
+  backgrounds.splice(backgrounds.length, 0, backgrounds[0]);
+  backgrounds.splice(0, 1);
+}, 10000);
